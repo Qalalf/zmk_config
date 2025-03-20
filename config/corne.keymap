@@ -56,7 +56,7 @@
                         >;
                 };
 
-                mouse_layer {
+                extra_1 {
                         display-name = "Mouse";
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
@@ -64,10 +64,6 @@
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                            &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
-                };
-
-                extra_1 {
-                        status = "reserved";
                 };
 
                 extra_2 {
