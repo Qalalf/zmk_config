@@ -17,38 +17,6 @@
             quick-tap-ms = <180>;
             global-quick-tap;
         };
-
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PARA";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARALESS";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PARAGREAT";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
     };
 
     keymap {
@@ -68,7 +36,7 @@
             display-name = "Nav";
             bindings = <
 &kp TAB           &kp N1  &kp N2      &kp N3          &kp N4              &kp N5   &kp N6   &kp N7              &kp N8           &kp N9       &kp N0      &kp PLUS
-&kp ESC           &kp F1  &hm F2      &hm F3          &hm F4              &kp F5   &kp F6   &kp F7              &kp F8           &kp F9       &kp F10     &kp F11
+&kp ESC           &kp F1  &kp F2      &kp F3          &kp F4              &kp F5   &kp F6   &kp F7              &kp F8           &kp F9       &kp F10     &kp F11
 &kp LEFT_SHIFT    &trans  &trans      &trans          &trans              &trans   &trans   &trans              &trans           &trans       &trans      &kp F12
                                       &kp LGUI        &trans              &kp BSPC &lt 3 RET &trans              &kp RALT
             >;
@@ -94,6 +62,4 @@
             >;
         };
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
