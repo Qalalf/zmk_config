@@ -1,15 +1,99 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-        keymap {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
+        };
+
+        para: para {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PARA";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        caps: caps {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS";
+            #binding-cells = <0>;
+            continue-list = <MINUS BACKSPACE>;
+        };
+
+        paraless: paraless {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARALESS";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        paragreat: paragreat {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARAGREAT";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+
+    macros {
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_COMMAND &kp PLUS>;
+            label = "ZOOM_IN";
+        };
+
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_COMMAND &kp MINUS>;
+            label = "ZOOM_OUT";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        jv_paste {
+            bindings = <&kp RG(V)>;
+            key-positions = <19 28>;
+            layers = <0>;
+        };
+
+        jc_copy {
+            bindings = <&kp RG(C)>;
+            key-positions = <19 27>;
+        };
+
+        js_save {
+            bindings = <&kp RG(S)>;
+            key-positions = <19 14>;
+        };
+
+        jx_cut {
+            bindings = <&kp RG(X)>;
+            key-positions = <19 26>;
+        };
+    };
+
+    //
+
+    keymap {
         compatible = "zmk,keymap";
 
         main {
@@ -63,8 +147,12 @@
             >;
         };
 
-         symbols {
-            display-name = "Symbols";
+        symbols {
+            #ifdef KEYMAP_DRAWER
+                display-name = "Symbol";
+#else
+                display-name = "Symbols";
+#endif
 
             bindings = <
 &trans  &kp PIPE   &kp ASTERISK  &kp EXCL        &kp AMPERSAND         &kp PERCENT    &kp DOLLAR     &kp UNDER              &kp KP_MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
@@ -74,7 +162,7 @@
             >;
         };
 
-reset {
+        reset {
             display-name = "Reset";
             bindings = <
 &trans          &trans  &trans  &bt BT_CLR      &trans  &bt BT_NXT     &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 3  &trans  &trans
@@ -93,6 +181,7 @@ reset {
                           &trans     &trans      &trans         &kp BACKSPACE  &kp ENTER  &trans
             >;
         };
+    };
 
-        };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
