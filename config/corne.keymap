@@ -75,7 +75,7 @@
         };
 
         symbols {
-            display-name = "Symbols"
+            display-name = "Symbols";
             bindings = <
 &trans  &kp PIPE   &kp ASTERISK  &kp EXCL        &kp AMPERSAND         &kp PERCENT    &kp DOLLAR     &kp UNDER              &kp KP_MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &trans  &kp COLON  &kp LS(APOS)  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp PLUS       &kp EQUAL      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GRAVE         &kp SEMICOLON      &trans
@@ -85,7 +85,7 @@
         };
 
         mouse {
-            display-name = "Mouse"
+            display-name = "Mouse";
             bindings = <
 &trans  &kp PIPE   &kp ASTERISK  &kp EXCL        &kp AMPERSAND         &kp PERCENT    &kp DOLLAR     &msc SCRL_UP           &mmv MOVE_UP    &msc SCRL_DOWN    &kp RIGHT_BRACKET  &trans
 &trans  &kp COLON  &kp LS(APOS)  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp PLUS       &kp EQUAL      &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp SEMICOLON      &trans
