@@ -51,9 +51,9 @@
         symbols {
             display-name = "Symbols";
             bindings = <
-&trans  &kp PIPE   &kp ASTERISK  &kp EXCL        &kp AMPERSAND         &kp PERCENT    &kp DOLLAR     &kp UNDER              &kp KP_MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &kp COLON  &kp LS(APOS)  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp PLUS       &kp EQUAL      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GRAVE         &kp SEMICOLON      &trans
-&trans  &kp TILDE  &kp POUND     &kp AT          &kp LEFT_BRACKET      &kp SLASH      &kp BACKSLASH  &kp POUND              &kp CARET        &kp PERIOD        &kp SLASH          &trans
+&kp GRAVE &kp PIPE   &kp ASTERISK  &kp EXCL        &kp AMPERSAND         &kp PERCENT    &kp DOLLAR     &kp UNDER              &kp KP_MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp EQUAL
+&trans    &kp COLON  &kp LS(APOS)  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp PLUS       &kp EQUAL      &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GRAVE         &kp SEMICOLON      &trans
+&trans    &kp TILDE  &kp POUND     &kp AT          &kp LEFT_BRACKET      &kp SLASH      &kp BACKSLASH  &kp POUND              &kp CARET        &kp PERIOD        &kp SLASH          &trans
                                  &trans          &trans                &trans         &trans         &trans                 &trans
             >;
         };
