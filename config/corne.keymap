@@ -33,7 +33,7 @@
 */
 &kp TAB           &kp Q       &kp W            &kp E            &kp R              &kp T         &kp Y        &kp U               &kp I             &kp O           &kp P         &kp LBKT
 &kp ESC           &kp A       &hm LEFT_ALT S   &hm LEFT_SHIFT D &hm LCTRL F        &kp G         &kp H        &hm RCTRL J         &hm RIGHT_SHIFT K &hm RIGHT_ALT L &kp SEMI      &kp SQT
-&kp LEFT_SHIFT    &kp Z       &kp X            &kp C            &kp V              &kp B         &kp N        &kp M               &kp COMMA         &kp DOT         &kp FSLH      &kp BSHL
+&kp LEFT_SHIFT    &kp Z       &kp X            &kp C            &kp V              &kp B         &kp N        &kp M               &kp COMMA         &kp DOT         &kp FSLH      &none 
                                                &kp LGUI         &lt 1 SPACE        &kp BSPC      &kp RET      &mo 2               &kp RALT
             >;
         };
