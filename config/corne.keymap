@@ -19,6 +19,15 @@
         };
     };
 
+    combos {
+      compatible = "zmk,combos";
+      combo_shift_symbol {
+        timeout-ms = <50>;
+        key-positions = <41 42>;
+        bindings = <&kp LEFT_SHIFT>, <&mo 1>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
